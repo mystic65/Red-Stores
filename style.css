@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/* This nav will move header to right side */
+nav{
+    flex: 1;
+    text-align: right;
+}
+/* This code of peace wil hide dot points */
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+} 
+
+nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+
+/* This  will remove underline */
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 80%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25pz 0;
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+}
+
+.header{
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.header .row{
+    margin-top:70px ;
+}
+
+
+/* here categories section is started */
+.categories{
+    margin: 70px 0px;
+}
+
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img{
+    width: 100%;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Here Feature product section is started */
+
+.col-4{
+    /* flex basis ka matlab hai ki mujhe 4 images chahiye 1 row me */
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 60px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+/* This is for underline */
+
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+
+.col-4:hover {
+    transform: translate(-5px);
+}
+
+.offer{
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.col-2 .offer-img{
+    padding: 50px;
+}
+
+small{
+    color: #555;
+}
+
+/* Testimonials */
+
+.testimonials{
+    padding-top: 100px;
+}
+
+.testimonials .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1) ;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonials .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonials .col-3:hover{
+    transform: translateY(-10px);
+}
+
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #ff523b;
+}
+
+/* brands */
+
+.brands{
+    margin: 100px auto;
+}
+.col-4{
+    width: 160px;
+}
+
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    /* this grayscale 100% means, it will appear colourless */
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover{
+    filter: grayscale(0%);
+}
+
+/* here i am designing footer */
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+    
+}
+.footer h3{
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.footer-col1, .footer-col2, .footer-col3, .footer-col4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col1{
+    flex-basis: 30px;
+}
+.footer-col2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col2 img{
+    width: 140px;
+    margin-bottom: 20px;
+}
+.footer-col3, .footer-col4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 120px;
+}
+
+/* here i am manking website responsive for small screen. */
+.menu-icon{
+    width: 28px;
+    margin-left:20px;
+    display: none;
+}
+
+/* adding media query for in which my website has been become responsive */
+@media only screen and (max-width: 800px){
+    /* this 800px means that jab bhi 800px se kam ki screen size me webiste open hogi to ye effect dikhega */
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        /* these two line will ohide the navigation menu when i click on menu */
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* media query for less than 600size */
+
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+}
